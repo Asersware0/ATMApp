@@ -3,13 +3,13 @@ import java.util.Scanner;
 public class AtmProject {
 
 	public static void main(String[] args) {
-		int bakiye = 0, input, deger;
+		int bakiye = 1000, input, deger;
 		
 		Scanner scan = new Scanner(System.in);
 		System.out.println("****** Aser Banka Hoş Geldiniz!! ******");
 		System.out.println("Güncel Bakiyeniz: " + bakiye + "TL");
 		
-		while(bakiye > 0 ) {
+		while(bakiye >= 0 ) {
 			System.out.println(" ");
 			System.out.println("1- Para Çek");
 			System.out.println("2- Para Yatır");
@@ -22,9 +22,13 @@ public class AtmProject {
 			if(input == 1){
 				System.out.println("Lütfen çekmek istediğiniz miktarı giriniz: ");
 				deger= scan.nextInt();
-				bakiye = bakiye - deger;
-				System.out.println("İşlem Tamamlandı.... Güncel Bakiyeniz: " + bakiye);
-				
+				if(deger > bakiye) {
+					System.out.println("Bakiye yetersiz!!!");
+				}
+				else {
+					bakiye = bakiye - deger;
+					System.out.println("İşlem Tamamlandı.... Güncel Bakiyeniz: " + bakiye);
+				}
 			}
 			
 			
