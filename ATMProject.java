@@ -18,7 +18,9 @@ public class AtmProject {
 			System.out.println(" ");
 			System.out.println("Lütfen işlem seçiniz. (1-4 arası sayı girşi yapınız)");
 			input = scan.nextInt();
-			
+
+
+			//para çekme işlemi
 			if(input == 1){
 				System.out.println("Lütfen çekmek istediğiniz miktarı giriniz: ");
 				deger= scan.nextInt();
@@ -32,7 +34,7 @@ public class AtmProject {
 			}
 			
 			
-			
+			// para yatırma işlemi
 			else if(input == 2) {
 				
 				
@@ -44,25 +46,21 @@ public class AtmProject {
 				
 			}
 			
-			
+
+
+			// bakiye sorgulama işlemi
 			else if(input == 3) {
 				System.out.println("Güncel Bakiyeniz. " + bakiye);
 			}
 			
 			
-			
+			// sistemden çıkış işlemi
 			else if(input == 4) {
 				System.out.println("Başarıyla Çıkış yaptınız");
 				break;
 			}
-			
-			
-			
-			else if (bakiye < 0 ) {
-				break;	
-			}
-			
-			
+
+			//geçersiz sayı girilince ekranda gözüken yazı
 			else{
 				System.out.println("Lütfen geçerli bir işlem seçiniz....");
 			}
